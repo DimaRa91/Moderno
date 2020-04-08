@@ -65,11 +65,11 @@
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
     line-height: 72px;
   }
   &-text {
-    font-weight: 500;
+    @include f500;
     margin-bottom: 50px;
     font-size: 20px;
     line-height: 30px;
@@ -86,11 +86,11 @@
       height: 56px;
       border: none;
       font-style: 14px;
-      font-weight: 500;
+      @include f500;
       padding: 0 60px 0px 25px;
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
   }
@@ -149,7 +149,7 @@
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
-    font-weight: 500;
+    @include f500;
   }
   &-name {
     max-width: 310px;
@@ -168,7 +168,7 @@
   &-price {
     font-size: 20px;
     color: $bg;
-    font-weight: 700;
+    @include f700;
   }
   &-info {
     display: flex;
@@ -192,7 +192,7 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       padding-left: 10px;
     }
   }
@@ -259,3 +259,58 @@
 }
 
 //  end product-slider
+
+// advantages star
+.advantages {
+  background-color: $bg;
+  padding: 110px 0;
+}
+.advantages__title {
+  color: #fff;
+}
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__item {
+  padding: 0 15px;
+  max-width: 370px;
+  text-align: center;
+
+  &:hover {
+    .advantages__item-images {
+      background-color: $green;
+      transition: all 0.5s;
+    }
+    .advantages__item-title {
+      transition: all 0.5s;
+      color: $green;
+    }
+    .advantages__item-images {
+      g {
+        transition: all 0.5s;
+        fill: #fff;
+      }
+    }
+  }
+  &-images {
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+  }
+  &-title {
+    color: #fff;
+    margin-bottom: 25px;
+    @include f500;
+    font-size: 24px;
+  }
+  &-text {
+    font-size: 24px;
+  }
+}
+// advantages end
