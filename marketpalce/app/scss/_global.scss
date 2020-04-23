@@ -9,6 +9,7 @@ html {
 html,
 body {
   height: 100%;
+  
 }
 a {
   display: inline-block;
@@ -28,6 +29,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: $text;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -101,5 +103,17 @@ body {
     a {
       color: #bec9cf;
     }
+  }
+}
+.angle-right {
+  position: relative;
+  padding-left: 15px;
+  &::before {
+    content: "\f105";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+    color: $green;
   }
 }
