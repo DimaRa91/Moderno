@@ -81,10 +81,7 @@
                   ><span>5</span></a
                 >
                 <div class="circle__menu message__menu">
-                  <a
-                    href="#"
-                    class="circle__item icon-envelope-o icons-color"
-                  >
+                  <a href="#" class="circle__item icon-envelope-o icons-color">
                     <img
                       class="circle__images"
                       src="images/message.png"
@@ -203,8 +200,10 @@
                 </div>
               </div>
               <a
-                class="header__btn header__btn-login "
-                href="#"
+                class="header__btn header__btn-login"
+                data-fancybox
+                data-src="#modal"
+                href="javascript:;"
                 >Login</a
               >
               <a
@@ -212,11 +211,7 @@
                 href="#"
                 >Logout</a
               >
-              <a
-                class="header__btn header__btn-register "
-                href="#"
-                >Register</a
-              >
+              <a class="header__btn header__btn-register" href="#">Register</a>
             </div>
             <div class="header__btn-menu icon-user"></div>
           </div>
@@ -452,7 +447,8 @@
             </div>
             <div
               class="product__item mix category-wordpress category-new"
-              data-order="5">
+              data-order="5"
+            >
               <a
                 class="product__item-img"
                 href="#"
@@ -475,7 +471,8 @@
                 <a class="product__item-author" href="#">
                   <div
                     class="avatar"
-                    style="background-image: url(images/user.png);"></div>
+                    style="background-image: url(images/user.png);"
+                  ></div>
                   <span>Radiustheme</span>
                 </a>
                 <div class="product__item-star">
@@ -484,7 +481,10 @@
                 </div>
               </div>
             </div>
-            <div class="product__item mix category-joomla category-popular" data-order="6">
+            <div
+              class="product__item mix category-joomla category-popular"
+              data-order="6"
+            >
               <a
                 class="product__item-img"
                 href="#"
@@ -507,7 +507,8 @@
                 <a class="product__item-author" href="#">
                   <div
                     class="avatar"
-                    style="background-image: url(images/user.png);"></div>
+                    style="background-image: url(images/user.png);"
+                  ></div>
                   <span>Radiustheme</span>
                 </a>
                 <div class="product__item-star">
@@ -1309,9 +1310,7 @@
               <div class="footer__info">
                 PO Box 16122 Collins Street West Victoria 8007 Australia
               </div>
-              <a
-                class="footer__info footer__info-phone"
-                href="tel:+61383766284"
+              <a class="footer__info footer__info-phone" href="tel:+61383766284"
                 >+61 3 8376 6284</a
               >
             </div>
@@ -1369,6 +1368,25 @@
         </div>
       </div>
     </footer>
+    <!-- </div> -->
+    <div id="modal">
+      <div class="login__wrapper">
+        <div class="login__title">
+          Login
+        </div>
+        <form>
+          <label class="login-labes-name" for="">
+            <input type="text" placeholder="Name" required />
+          </label>
+          <label class="login-labes-pass" for="">
+            <input type="text" placeholder="Password" required />
+          </label>
+          <button type="submit">Submit</button>
+          <a class="create_acc" href="#">Creat An Account?</a>
+          <a class="lost-pass" href="#">Lost Password?</a>
+        </form>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
