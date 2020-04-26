@@ -177,6 +177,7 @@
   position: relative;
   margin-top: 40px;
   height: 90px;
+  z-index: 1;
   &:hover {
     .user__menu {
       height: auto;
@@ -1780,7 +1781,7 @@
 // settings start
 
 .settings {
-  padding-bottom: 100px;
+  padding-bottom: 45px;
 }
 .product-one__tabs.settings__tabs {
   display: flex;
@@ -1853,20 +1854,209 @@
     height: 40px;
     color: #000;
     border: 1px solid #dedede;
-    background-color:#f9f9f9;
+    background-color: #f9f9f9;
     padding: 0px 10px;
   }
-  select{
+  select {
     max-width: 540px;
     width: 100%;
     height: 40px;
     color: #000;
     border: 1px solid #dedede;
-    background-color:#f9f9f9;
+    background-color: #f9f9f9;
     padding: 0px 10px;
   }
   buttoon {
   }
 }
 // settings end
+
+//  start profile
+
+.profile__inner {
+  display: flex;
+}
+.profile__aside {
+  max-width: 270px;
+  width: 100%;
+  margin-right: 30px;
+}
+.profile__content {
+  width: 100%;
+}
+.profile-status {
+  font-size: 13px;
+  padding: 6px 9px 5px 30px;
+  color: #707070;
+  position: relative;
+  border: solid 1px #d6d6d6;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 13px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+}
+.profile-on {
+  &::before {
+    background-color: $green;
+  }
+}
+.profile-off {
+  &::before {
+    background-color: $red;
+  }
+}
+.profile__aside-btn {
+  margin-bottom: 13px;
+  text-align: center;
+}
+.profile__aside-message {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  @include f500;
+  background-color: #546e7a;
+  padding: 18px 10px;
+  position: relative;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+  &::before {
+    content: "\f003";
+    font-family: "icomoon";
+    position: absolute;
+    font-size: 16px;
+    left: 56px;
+    top: 17px;
+  }
+}
+.profile__aside-following {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  @include f700;
+  background-color: $green;
+  padding: 18px 10px;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+}
+.profile__banner {
+  border: solid 1px #dededede;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 35px;
+}
+.profile__banner-images {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 332px;
+}
+.profile__items {
+  display: flex;
+  border: 1px solid #dedede;
+  margin-bottom: 30px;
+}
+.profile__item {
+  width: 217px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  padding: 20px 0px 17px;
+  & + .product__item {
+    border-left: 1px solid #dedede;
+  }
+}
+.profile__item-title {
+  font-size: 14px;
+  color: $bg;
+  @include f500;
+}
+.profile__subtitle {
+  color: #707070;
+  font-size: 14px;
+  @include f500;
+  &.profile__item-sales {
+    color: $bg;
+  }
+}
+.rate-star-profile {
+  margin-right: 10px;
+  margin-top: 0;
+}
+.profile-settings {
+  .product-one__tabs.settings__tabs {
+    .tabs span {
+      font-family: "Roboto", sans-serif !important;
+      color: #707070;
+      position: relative;
+      &.active::before {
+        color: $green;
+      }
+      &::before {
+        top: 16px;
+        position: absolute;
+        left: 27px;
+        font-style: 14px;
+        font-family: "icomoon";
+        color: #d0d0d0;
+      }
+    }
+  }
+  background-color: #f4f6f5;
+}
+.personal__box {
+  background-color: #fff;
+  padding: 25px 40px 25px;
+}
+.personal__box-title {
+  margin-bottom: 25px;
+  @include f700;
+  font-size: 20px;
+  color: $bg;
+}
+.personal__box-text {
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 20px;
+    color: #707070;
+  }
+}
+.personal__box-item-head {
+  display: flex;
+  justify-content: space-between;
+}
+.personal__box-item-name {
+  font-size: 16px;
+  color: $bg;
+  @include f500;
+  font-style: italic;
+}
+.personal__box-item-number {
+  font-size: 16px;
+  color: $bg;
+  @include f700;
+}
+.personal__box-item-line {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  height: 15px;
+  margin-top: 17px;
+  span {
+    display: block;
+    border-radius: 3px;
+    height: 15px;
+  }
+}
+
+.d0d0d0 {
+  color: #d0d0d0;
+}
+//  end profile
+
 @import "media";
