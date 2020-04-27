@@ -462,6 +462,11 @@
   padding: 110px 0px;
   background-color: $grey;
 }
+.product__wrapper,
+.product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 .products__title {
   color: $bg;
 }
@@ -484,7 +489,14 @@
     }
   }
 }
+.product-slider__inner {
+  .product__item {
+    margin-left: 0;
+  }
+}
 .product__item {
+  flex-basis: calc(25% -30px);
+  margin-left: 30px;
   max-width: 442px;
   width: 100%;
   box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
@@ -557,7 +569,8 @@
 }
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
 }
 .products__bottom-btn {
@@ -609,7 +622,6 @@
 }
 .product__item-star {
   font-size: 12px;
-  margin-left: 125px;
 }
 
 //  end product-slider
@@ -901,7 +913,8 @@
   border: solid 1px #dedede;
   padding: 0px 32px 32px;
   margin-bottom: 30px;
-  width: 270px;
+  max-width: 270px;
+  width: 100%;
 }
 .aside__title {
   border-bottom: 1px solid #dde3e8;
@@ -1107,9 +1120,10 @@
 }
 .product-page__content {
   .product__item {
-    max-width: 270px;
+    flex-basis: calc(33.3333% - 30px);
     background-color: #fff;
     transition: all 0.5s;
+    margin-left: 30px;
   }
   .product__item-img {
     min-height: 180px;
@@ -1132,9 +1146,10 @@
 }
 .product-page__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 .pagination__list {
   li {
@@ -1207,6 +1222,7 @@
 }
 .product__item {
   &.list {
+    flex-basis: 100%;
     max-width: 100%;
     .product__item-img {
       width: 240px;
@@ -1256,6 +1272,7 @@
 .product-one__content {
   margin-right: 31px;
   max-width: 870px;
+  width: 100%;
 }
 .product-one__images-inner {
   background-color: #fff;
@@ -1263,7 +1280,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0px;
+  padding: 16px;
 }
 .product-one__images {
   width: 829px;
@@ -1869,6 +1886,12 @@
   buttoon {
   }
 }
+.user__box,
+.basket__box,
+.notification__box,
+.message__box {
+  margin-top: 54px;
+}
 // settings end
 
 //  start profile
@@ -1963,7 +1986,8 @@
   margin-bottom: 30px;
 }
 .profile__item {
-  width: 217px;
+  max-width: 217px;
+  width: 100%;
   text-align: center;
   background-color: #fff;
   border: 1px solid #dedede;
@@ -2124,38 +2148,36 @@
     box-sizing: border-box;
     width: 100%;
     height: 40px;
-    padding:0 18px;
+    padding: 0 18px;
     border: none;
-    border-bottom-color: #B3B3B3;
+    border-bottom-color: #b3b3b3;
     border-radius: 0px;
     background: transparent;
-    box-shadow: inset 1px 1px #F1F1F1;
+    box-shadow: inset 1px 1px #f1f1f1;
     font-size: 12px;
     line-height: 40px;
     color: #707070;
     margin-left: 100px;
     outline: none;
     cursor: pointer;
-}
-.jq-file__browse {
-  top: 5px;
-  right: auto;
-  left: 9px;
-  font-size: 12px;
-  line-height: 26px;
-  padding: 0px 12px;
-  border-left: none;
-  border: 1px solid #d7d7d7;
-  border-radius:  0;
-  background:#FFF;
-  box-shadow: none;
-  text-shadow: none;
-  color: #444444;
-  cursor: pointer;
-}
-  .jq-selectbox {
-    width: 100%;
   }
+  .jq-file__browse {
+    top: 5px;
+    right: auto;
+    left: 9px;
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0px 12px;
+    border-left: none;
+    border: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    color: #444444;
+    cursor: pointer;
+  }
+
   .jq-selectbox__select {
     height: 40px;
     padding: 0 18px;
@@ -2182,7 +2204,6 @@
       right: 0;
       top: 0;
     }
-  
   }
   .jq-selectbox__trigger {
     border-left: none;
@@ -2196,4 +2217,136 @@
 
 //   upload end
 
+// start widthdrawal
+.withdrawals__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+.withdrawals__col {
+  max-width: 570px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  height: 100%;
+}
+.withdrawals__title {
+  font-size: 24px;
+  @include f500;
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+  color: $bg;
+}
+.withdrawals__content {
+  padding-left: 35px;
+  padding-right: 40px;
+}
+.withdrawals__form-line {
+  button {
+    margin-top: 35px;
+    border: none;
+    color: #fff;
+    background-color: $green;
+    padding: 18px 25px;
+    @include f500;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  label {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    @include f500;
+    margin-bottom: 15px;
+    color: $bg;
+    span {
+      color: $green;
+    }
+  }
+  input,
+  select {
+    width: 100%;
+    border: solid 1px #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0px 18px;
+  }
+  select {
+    .jq-selectbox__select {
+      height: 40px;
+      padding: 0 18px;
+      border: 1px solid #d7d7d7;
+      border-bottom-color: #d7d7d7;
+      border-radius: 0px;
+      background: #f9f9f9;
+      box-shadow: none;
+      font-family: "Roboto-Regular", "sans-serif";
+      color: #707070;
+      text-shadow: none;
+      line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+      border: none;
+      position: relative;
+      font-size: 15px;
+      right: -20px;
+      top: 0;
+      &::before {
+        content: "\f0d7";
+        font-family: "icomoon";
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+    .jq-selectbox__trigger {
+      border-left: none;
+    }
+  }
+}
+
+.withdrawals__content-items {
+  padding-bottom: 35px;
+}
+.withdrawals__content-item {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444444;
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+}
+.withdrawals__content-date {
+  width: 154px;
+  padding-left: 20px;
+  @include f500;
+}
+.withdrawals__content-email {
+  width: 180px;
+  @include f500;
+}
+.withdrawals__content-price {
+  width: 70px;
+  @include f700;
+}
+.withdrawals__content-status {
+  @include f700;
+  width: 88px;
+  color: $bg;
+}
+.status-paid {
+  color: $green;
+}
+.upload-line .jq-selectbox__trigger-arrow {
+  border: none;
+  position: relative;
+  font-size: 15px;
+  right: -29px;
+  top: 0;
+}
+//  end widthdrawal
 @import "media";
